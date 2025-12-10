@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Your Literary Haven – Buy, Sell, and Discover Books in a Cozy, Artistic Online Bookstore." />
+  <title>Your Literary Haven</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">📚 Literary Haven</div>
+    <nav>
+      <ul>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#authors">Authors</a></li>
+        <li><a href="#featured">Featured</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#account" id="accountBtn">Account</a></li>
+        <li><a href="#cart" id="cartBtn">Cart <span id="cartCount">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1>Your Literary Haven</h1>
+      <p>Where Stories Find Their Readers</p>
+      <form class="search-bar" autocomplete="off">
+        <input type="text" id="searchInput" placeholder="Search books, authors, genres..." />
+        <button type="submit">🔍</button>
+        <div class="autocomplete-suggestions" id="autocomplete"></div>
+      </form>
+      <div class="hero-actions">
+        <a href="#categories" class="btn">Shop Now</a>
+        <a href="#sell" class="btn btn-outline">Sell Your Book</a>
+        <a href="#featured" class="btn">Discover Bestsellers</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book Categories Section -->
+  <section class="categories" id="categories">
+    <h2>Book Categories</h2>
+    <div class="category-grid">
+      <!-- Category cards will be injected by JS -->
+    </div>
+  </section>
+
+  <!-- Featured Authors Section -->
+  <section class="authors" id="authors">
+    <h2>Featured Authors</h2>
+    <div class="author-carousel">
+      <!-- Author profiles will be injected by JS -->
+    </div>
+  </section>
+
+  <!-- Featured Books & Bestseller Lists -->
+  <section class="featured" id="featured">
+    <h2>Editor’s Picks & Bestsellers</h2>
+    <div class="featured-books">
+      <!-- Featured books will be injected by JS -->
+    </div>
+  </section>
+
+  <!-- Books-to-Movies Section -->
+  <section class="books-movies" id="books-movies">
+    <h2>Books Adapted Into Movies</h2>
+    <div class="books-movies-list">
+      <!-- Books-to-movies will be injected by JS -->
+    </div>
+  </section>
+
+  <!-- Buy & Sell Books Section -->
+  <section class="buy-sell" id="sell">
+    <h2>Buy & Sell Books</h2>
+    <div class="buy-sell-container">
+      <div class="buy-books">
+        <h3>Buy Books</h3>
+        <div class="filters">
+          <!-- Filters will be injected by JS -->
+        </div>
+        <div class="book-list">
+          <!-- Book list will be injected by JS -->
+        </div>
+      </div>
+      <div class="sell-books">
+        <h3>Sell Your Book</h3>
+        <form id="sellForm">
+          <input type="text" name="title" placeholder="Book Title" required />
+          <input type="text" name="author" placeholder="Author" required />
+          <input type="file" name="image" accept="image/*" />
+          <select name="condition" required>
+            <option value="">Condition</option>
+            <option value="new">New</option>
+            <option value="used">Used</option>
+          </select>
+          <input type="number" name="price" placeholder="Price ($)" min="1" required />
+          <button type="submit">List Book</button>
+        </form>
+        <div class="sell-dashboard">
+          <!-- User's listed books will be shown here -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Literary Blog Section -->
+  <section class="blog" id="blog">
+    <h2>Literary Blog</h2>
+    <div class="blog-list">
+      <!-- Blog posts will be injected by JS -->
+    </div>
+    <div class="blog-post-modal" id="blogPostModal">
+      <div class="blog-post-content"></div>
+      <div class="comments-section"></div>
+      <button class="close-blog-post">Close</button>
+    </div>
+  </section>
+
+  <!-- User Account Section -->
+  <section class="account" id="account">
+    <h2>User Account</h2>
+    <div class="account-container">
+      <div class="login-signup">
+        <form id="loginForm">
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="password" name="password" placeholder="Password" required />
+          <button type="submit">Login</button>
+        </form>
+        <form id="signupForm">
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="password" name="password" placeholder="Password" required />
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+      <div class="user-dashboard">
+        <!-- User info, wishlist, order history, saved authors, uploaded books -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-logo">📚 Literary Haven</div>
+    <div class="footer-links">
+      <a href="#categories">Categories</a>
+      <a href="#authors">Authors</a>
+      <a href="#featured">Featured</a>
+      <a href="#blog">Blog</a>
+      <a href="#account">Account</a>
+    </div>
+    <div class="footer-contact">
+      <p>Contact: hello@literaryhaven.com</p>
+      <div class="footer-social">
+        <a href="#"><img src="assets/images/icon-fb.png" alt="Facebook" /></a>
+        <a href="#"><img src="assets/images/icon-ig.png" alt="Instagram" /></a>
+        <a href="#"><img src="assets/images/icon-tw.png" alt="Twitter" /></a>
+      </div>
+    </div>
+    <form class="newsletter">
+      <label for="newsletterEmail">Join our Book Club</label>
+      <input type="email" id="newsletterEmail" placeholder="Your email..." required />
+      <button type="submit">Subscribe</button>
+    </form>
+    <div class="footer-divider"></div>
+    <div class="footer-copy">&copy; 2025 Literary Haven. All rights reserved.</div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
